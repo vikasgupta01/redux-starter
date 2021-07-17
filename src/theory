@@ -1,0 +1,54 @@
+----------------------------------- Pure Functions -----------------------------------
+
+Pure Functions : A function is called a pure function when it gives same output everytime for a particular input.
+i. e. (same args => same Result)
+
+Properties/Constraints of Pure Functions - 
+    1. No random values
+    2. No current date/time
+    3. No global state (pass everything needed by function as parameters)
+    4. No mutation of parameters
+
+
+Benefits of Pure Functions - 
+    1. Self Documenting : Because everything the function needs is right there.
+    2. Easily Testable : Because we don't have to set some global states prior to testing the function.
+    3. Concurrency : Since no global states used, we can run these functions in parallel.
+    4. Cacheable : If intensive computations are involved, we can avoid repeated computation by storing the result in cache.
+
+
+----------------------------------- Immutability -----------------------------------
+
+Pure functions can't change or mutate their arguments. So a concept that goes hand in hand is immutability, 
+which basically means once we create an object, it can't be changed.
+If you want to change an object, we have to take a copy first, and then change that copy.
+
+Strings in JS and in most programming language is immutable. In contrast javascript allows us to change/mutate 
+objects and they're not immutable but in pure functional programming languages, we can't mutate data 
+hence JS is not a pure functional programming language, and it isn't designed to be so, it's a multi paradigm language, 
+but we can still apply functional programming principles when writing js code.
+
+Q. But what about the const keyword? Can't it create immutable objects??
+This is a common misconception. You're not creating an immutable object. We're just preventing the reassignment of 
+that keyword
+to a different object.
+const book = {};
+book.title = "..."; //valid
+since const is used, we can't just reassign the book keyword to another object.
+
+
+> Why immutability?
+    Pros : 
+        - Predictability : With immutability, we can predict the function. So no surprises down the road.
+        - Faster change detection (since the immutable objects will be compared by reference). This Helps in re-rendering. 
+        - Concurrency - parallel running.
+    
+    Cons : 
+        - Performance : Everytime we change an object, all the values should be copied to the new object. No issue if few objects.
+        - Memory Overhead : But we have immutability libraries to reduce Memory Overhead as much as possible.
+
+Bottom line : If you're using redux, you should not mutate data. Because that's fundamental principle in redux. But, 
+that can be done outside of redux.
+
+
+----------------------------------- Immutability -----------------------------------

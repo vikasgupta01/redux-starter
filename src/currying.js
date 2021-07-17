@@ -5,6 +5,6 @@ function add(a) {
 }
 
 
-const add2 = a => b => a+b;
+const add2 = a => b => a+b; // (a, b) => a+b
 
 add(1)(5);
