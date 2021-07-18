@@ -175,3 +175,20 @@ function publish(book) {
 let updatedBook = publish(book);
 console.log(book);
 console.log(updatedBook);
+
+
+
+// ----------------------- REDUX PART -----------------------
+
+// With redux, we store application's state inside a single javascript object called the store. 
+// This object is the single source of truth for our application state. and is accessible at all parts of UI.
+// we can use any form of data inside store. Redux doesn't care.
+// But we can't mutate/modify the store, as redux is based on functional programming principles.
+
+
+// Reducer : It's a function that takes the current instance of the store, and returns the updated store.
+
+
+// Just watch the video now. 
+// Redux Tutorial by Mosh
+// Course URL : https://www.youtube.com/watch?v=poQXNp9ItL4
